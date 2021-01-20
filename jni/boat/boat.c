@@ -26,7 +26,7 @@ void boatSetCursorMode(int mode){
 	jint result = (*mBoat.android_jvm)->AttachCurrentThread(mBoat.android_jvm, &env, 0);
 	
 	if (result != JNI_OK || env == 0){
-		__android_log_print(ANDROID_LOG_ERROR, "Boat", "Failed to attach thread to JavaVM.");
+		__android_log_print(ANDROID_LOG_ERROR, "Boat", "No success found in attaching thread to JavaVM.");
 		abort();
 	}
 	
